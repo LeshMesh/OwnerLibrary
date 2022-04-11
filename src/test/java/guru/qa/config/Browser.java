@@ -1,2 +1,8 @@
-package guru.qa.config;public class Browser {
+package guru.qa.config;
+
+public enum Browser {
+
+    FIREFOX,
+
+    CHROME
 }
