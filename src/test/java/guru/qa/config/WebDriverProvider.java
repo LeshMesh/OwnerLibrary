@@ -1,5 +1,7 @@
 package guru.qa.config;
 
+import org.aeonbits.owner.Config;
+import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -9,7 +11,11 @@ import java.util.function.Supplier;
 
 public class WebDriverProvider implements Supplier<WebDriver> {
 
-    private WebDriverConfig config = new WebDriverConfig();
+    private final WebDriverConfig config;
+
+    public WebDriverProvider() {
+        this.config = ConfigFactory.create(WebDriverConfig.class, System.getProperties());
+    }
 
     @Override
     public WebDriver get() {

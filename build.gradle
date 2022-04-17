@@ -17,12 +17,14 @@ compileTestJava {
 }
 
 dependencies {
-    testImplementation (
+    testImplementation(
             "org.junit.jupiter:junit-jupiter:5.8.2",
-            "org.seleniumhq.selenium:selenium-java:4.1.3")
-    testRuntimeOnly (
+            "org.seleniumhq.selenium:selenium-java:4.1.3",
+            "org.aeonbits.owner:owner:1.0.12",
+            "org.assertj:assertj-core:3.22.0")
+    testRuntimeOnly(
             "org.junit.jupiter:junit-jupiter:5.8.2",
-            "org.slf4j:slf4j-simple:1.7.32")
+            "org.slf4j:slf4j-simple:1.7.36")
 }
 
 test {
